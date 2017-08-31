@@ -1,6 +1,7 @@
 module Jupiter
   # class for interacting with DOI API using EZID
   class DOIService
+
     PUBLISHER = 'University of Alberta Libraries'.freeze
     DATACITE_METADATA_SCHEME = {
       'Book' => 'Text/Book',
@@ -103,5 +104,6 @@ module Jupiter
         export: @work.private? ? 'no' : 'yes'
       }
     end
+
   end
 end

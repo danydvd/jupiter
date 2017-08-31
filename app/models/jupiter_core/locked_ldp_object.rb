@@ -92,7 +92,7 @@ module JupiterCore
                         '[]'
                       else
                         val.to_s
-                      end
+        end
         "#{name}: #{val_display}"
       end.join(', ') + '>'
     end
@@ -255,15 +255,15 @@ module JupiterCore
     end
 
     def previous_visibility
-      return @visibility_lifecycle_previous_state
+      @visibility_lifecycle_previous_state
     end
 
     def transitioned_from_private?
-      return previous_visibility == VISIBILITY_PRIVATE && visibility != VISIBILITY_PRIVATE
+      previous_visibility == VISIBILITY_PRIVATE && visibility != VISIBILITY_PRIVATE
     end
 
     def transitioned_to_private?
-      return previous_visibility != VISIBILITY_PRIVATE && visibility == VISIBILITY_PRIVATE
+      previous_visibility != VISIBILITY_PRIVATE && visibility == VISIBILITY_PRIVATE
     end
 
     # Used to dynamically turn an arbitrary Solr document into an instance of its originating class
